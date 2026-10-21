@@ -1,16 +1,46 @@
-# React + Vite
+# Bharat Clock
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A small React app built with Vite that displays the current date and time.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js and npm
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Open a terminal in this folder and install the dependencies:
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Start the Vite development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL printed in the terminal to view the app.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server with hot reload. |
+| `npm run build` | Create a production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run lint` | Run Oxlint. |
+
+## Project structure
+
+```text
+src/
+  components/
+    ClockHeading.jsx  # App title
+    ClockSlogan.jsx   # Short description
+    CurrentTime.jsx  # Displays the date and time
+  App.jsx
+  main.jsx
+```
+
+The displayed date and time use the browser's locale and time zone.
