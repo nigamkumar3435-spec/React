@@ -1,44 +1,40 @@
 # React Learning Projects
 
-A collection of small, independent React apps and exercises built with Vite. The projects cover React components, fragments, Bootstrap styling, and simple interactive apps.
+A collection of small, independent React 19 exercises and apps built with Vite. Each app has its own `package.json`; there is no root-level app or shared install command.
 
 ## Projects
 
-| Project | What you'll find |
+| Project | Description |
 | --- | --- |
-| [`firstReactApp`](./firstReactApp/) | A Vite starter app with a click counter and the default React/Vite welcome content. |
-| [`createReactcomp/vite-project`](./createReactcomp/vite-project/) | Practice composing an app from custom components, including `Hello`, `KgButton`, and `Random`. |
-| [`18Fragments/learning-fragments`](./18Fragments/learning-fragments/) | A healthy-food list styled with Bootstrap, demonstrating fragment-based JSX output. |
-| [`17 BootStrap/learning-bootstrap`](./17%20BootStrap/learning-bootstrap/) | Bootstrap-related styling and button examples. |
-| [`Projects/1-todo-app-version-one`](./Projects/1-todo-app-version-one/) | A basic to-do app assembled from small components. |
+| [`firstReactApp`](./firstReactApp/) | Vite starter app with a React counter and links to React and Vite resources. |
+| [`createReactcomp/vite-project`](./createReactcomp/vite-project/) | Component-composition practice using `Hello`, `KgButton`, and `Random`. |
+| [`17 BootStrap/learning-bootstrap`](./17%20BootStrap/learning-bootstrap/) | Bootstrap-themed button and badge examples. |
+| [`18Fragments/learning-fragments`](./18Fragments/learning-fragments/) | JSX fragments and a Bootstrap-styled healthy-food list. |
+| [`19Mapmethods/learning-mapmethod`](./19Mapmethods/learning-mapmethod/) | Renders a list of foods from an array with JavaScript `map()`. |
+| [`Projects/1-todo-app-version-one`](./Projects/1-todo-app-version-one/) | A simple to-do app assembled from separate components. |
 | [`Projects/2-bharat-clock-version-one`](./Projects/2-bharat-clock-version-one/) | A clock app that displays the current date and time. |
 
-## Run an app
+## Run a project
 
-Each project has its own `package.json` and dependencies. There is no root-level app or install command. Open a terminal in the project folder you want to run, then install dependencies and start the Vite development server. For example:
+Install [Node.js](https://nodejs.org/) and npm, then open a terminal in the app's folder. For example, to run the map-method exercise:
 
-```bash
-cd "Projects/2-bharat-clock-version-one"
+```sh
+cd "19Mapmethods/learning-mapmethod"
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite in your browser. Replace the example folder with any project listed above to run a different app.
+Vite prints a local URL in the terminal; open it in your browser. To run another project, replace the example path with its folder from the table above.
 
-## Available commands
+## Available scripts
 
-Run these commands from an individual app's folder:
+Run these commands from an individual app folder:
 
 | Command | Purpose |
 | --- | --- |
-| `npm run dev` | Start the development server with hot reload. |
+| `npm run dev` | Start the Vite development server with hot reload. |
 | `npm run build` | Create a production build in `dist/`. |
 | `npm run preview` | Preview the production build locally. |
-| `npm run lint` | Run the app's configured linter. |
+| `npm run lint` | Run the project's configured linter. |
 
-Most apps use Oxlint for `npm run lint`; `17 BootStrap/learning-bootstrap` uses ESLint.
-
-## Requirements
-
-- Node.js
-- npm
+The Bootstrap exercise uses ESLint; the other apps use Oxlint.
