@@ -105,13 +105,6 @@ firstReactApp
 → Bharat clock
 ```
 
-## Notes
-
-- The current project manifests use React 19 and Vite 8.
-- These projects are intended for learning and experimentation, not production deployment.
-- The clock calculates the date and time when its component renders; it does not continuously update by itself.
-- The version-one to-do app demonstrates component structure with fixed sample data.
-
 ## Troubleshooting
 
 1. Run commands inside the selected exercise folder.
