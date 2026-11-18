@@ -1,20 +1,29 @@
-# React Learning Journey
+# React Learning Workspace
 
-A collection of independent React and Vite practice projects covering components, props, fragments, lists, conditional rendering, styling, and small applications.
+A collection of independent React exercises and small Vite applications. The folders are organized from basic component creation through props, conditional rendering, and complete UI examples.
 
 ## Projects
 
-| # | Project | Topic |
-|---:|---|---|
-| 1 | [`firstReactApp`](./firstReactApp/) | Vite setup, JSX, components, and state |
-| 2 | [`createReactcomp/vite-project`](./createReactcomp/vite-project/) | Creating and composing components |
-| 3 | [`17 BootStrap/learning-bootstrap`](./17%20BootStrap/learning-bootstrap/) | Bootstrap and custom styling |
-| 4 | [`18Fragments/learning-fragments`](./18Fragments/learning-fragments/) | React fragments |
-| 5 | [`19Mapmethods/learning-mapmethod`](./19Mapmethods/learning-mapmethod/) | Rendering lists with `map()` |
-| 6 | [`20ConditionalRendering/learning-rendering`](./20ConditionalRendering/learning-rendering/) | Conditional rendering |
-| 7 | [`21Props/learning-props`](./21Props/learning-props/) | Passing data through props |
-| 8 | [`Projects/1-todo-app-version-one`](./Projects/1-todo-app-version-one/) | To-do app component structure |
-| 9 | [`Projects/2-bharat-clock-version-one`](./Projects/2-bharat-clock-version-one/) | Current date and time with reusable components |
+| Folder | Focus |
+|---|---|
+| [`firstReactApp`](./firstReactApp/) | Initial Vite app and React state with a counter |
+| [`createReactcomp/vite-project`](./createReactcomp/vite-project/) | Creating and composing custom components |
+| [`17 BootStrap/learning-bootstrap`](./17%20BootStrap/learning-bootstrap/) | Bootstrap-style buttons, badges, and themes |
+| [`18Fragments/learning-fragments`](./18Fragments/learning-fragments/) | React fragments and rendering a list |
+| [`19Mapmethods/learning-mapmethod`](./19Mapmethods/learning-mapmethod/) | Rendering arrays with `map()` |
+| [`20ConditionalRendering/learning-rendering`](./20ConditionalRendering/learning-rendering/) | Conditional rendering with logical and ternary expressions |
+| [`21Props/learning-props`](./21Props/learning-props/) | Passing arrays through props and splitting UI into components |
+| [`Projects/1-todo-app-version-one`](./Projects/1-todo-app-version-one/) | Static to-do app layout built from reusable components |
+| [`Projects/2-bharat-clock-version-one`](./Projects/2-bharat-clock-version-one/) | Bharat clock heading, slogan, date, and time |
+
+## Technology
+
+- React 19
+- React DOM
+- Vite 8
+- JavaScript and JSX
+- Bootstrap in exercises that use it
+- Oxlint, or ESLint in the Bootstrap exercise
 
 ## Prerequisites
 
@@ -22,101 +31,82 @@ A collection of independent React and Vite practice projects covering components
 - npm
 - A modern web browser
 
-## Run an exercise
+## Run a Project
 
-Each project has its own `package.json`. Run commands from the project folder, not from the repository root.
+This repository does not have a root `package.json`. Each exercise has its own package manifest and must be started from its own folder.
 
-```bash
-cd "18Fragments/learning-fragments"
+PowerShell example:
+
+```powershell
+cd "18Fragments\learning-fragments"
 npm install
 npm run dev
 ```
-
-Vite will print the local development URL, usually `http://localhost:5173/`.
 
 Another example:
 
-```bash
-cd "Projects/2-bharat-clock-version-one"
+```powershell
+cd "Projects\2-bharat-clock-version-one"
 npm install
 npm run dev
 ```
 
-## Commands
+Vite prints the local URL in the terminal, normally `http://localhost:5173/`.
+
+## Common Commands
+
+Run these inside the selected project folder:
 
 | Command | Description |
 |---|---|
 | `npm run dev` | Start the Vite development server |
 | `npm run build` | Create a production build |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run the project's configured linter |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run the configured linter |
 
-Most projects use Oxlint. The Bootstrap exercise uses ESLint.
-
-## Parent-folder dependencies
-
-[`19Mapmethods/`](./19Mapmethods/) and [`21Props/`](./21Props/) have Bootstrap dependencies in both their parent and nested lesson folders. Install dependencies in both locations when needed:
-
-```bash
-cd "19Mapmethods"
-npm install
-cd "learning-mapmethod"
-npm install
-npm run dev
-```
-
-```bash
-cd "21Props"
-npm install
-cd "learning-props"
-npm install
-npm run dev
-```
-
-## Typical project structure
-
-```text
-lesson-folder/
-├── index.html
-├── package.json
-├── vite.config.js
-├── public/
-└── src/
-    ├── main.jsx
-    ├── App.jsx
-    ├── App.css
-    ├── index.css
-    └── components/
-```
-
-The exact files vary by exercise.
-
-## Learning order
+## Suggested Learning Order
 
 ```text
 firstReactApp
-→ createReactcomp
-→ Bootstrap
-→ Fragments
-→ Map methods
-→ Conditional rendering
-→ Props
-→ To-do app
-→ Bharat clock
+  -> createReactcomp
+  -> 17 BootStrap
+  -> 18Fragments
+  -> 19Mapmethods
+  -> 20ConditionalRendering
+  -> 21Props
+  -> Projects/1-todo-app-version-one
+  -> Projects/2-bharat-clock-version-one
 ```
+
+## Typical Structure
+
+```text
+exercise-folder/
+|-- index.html
+|-- package.json
+|-- vite.config.js
+|-- public/
+`-- src/
+    |-- main.jsx
+    |-- App.jsx
+    |-- App.css
+    |-- index.css
+    |-- assets/
+    `-- components/
+```
+
+Some exercises use only a subset of these files.
+
+## Notes
+
+- The to-do app in `Projects/1-todo-app-version-one` demonstrates component structure and static content.
+- The Bharat clock renders the current date and time when it renders; it does not include a live update interval.
+- The parent folders `19Mapmethods` and `21Props` contain separate package manifests, but the React exercises run from their nested `learning-*` folders.
+- JSX used in this repository follows React 19 conventions.
 
 ## Troubleshooting
 
-1. Run commands inside the selected exercise folder.
-2. Run `npm install` if dependencies are missing.
-3. Delete `node_modules` and reinstall dependencies if they are stale.
-4. Close another process using the development port if Vite reports a port conflict.
-
-## Technologies
-
-- React 19
-- React DOM
-- Vite 8
-- JavaScript and JSX
-- Bootstrap in selected projects
-- ESLint or Oxlint, depending on the project
+1. Make sure the terminal is inside the specific project folder.
+2. Run `npm install` if the dependencies are missing.
+3. Remove `node_modules` and reinstall if the local dependencies become stale.
+4. Stop the conflicting process or change Vite's port if the default port is already in use.
