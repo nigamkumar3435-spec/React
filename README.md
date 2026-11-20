@@ -1,40 +1,39 @@
 # React Learning Workspace
 
-A collection of independent React learning exercises and small projects built with Vite. The folders progress from basic components and JSX to fragments, arrays, props, conditional rendering, and reusable UI components.
+A collection of independent React exercises and small apps built with JavaScript, JSX, and Vite. The exercises cover React fundamentals, while the `Projects` folder contains small UI projects.
 
-## Projects
+## Repository Contents
 
-| Folder | Topics |
+| Folder | What you'll learn |
 |---|---|
-| [`firstReactApp`](./firstReactApp/) | First Vite app, JSX, and component-based structure |
-| [`createReactcomp/vite-project`](./createReactcomp/vite-project/) | Creating and composing custom components |
-| [`17 BootStrap/learning-bootstrap`](./17%20BootStrap/learning-bootstrap/) | React with Bootstrap styling |
-| [`18Fragments/learning-fragments`](./18Fragments/learning-fragments/) | React fragments and list rendering |
+| [`firstReactApp`](./firstReactApp/) | Getting started with React and Vite |
+| [`createReactcomp/vite-project`](./createReactcomp/vite-project/) | Creating and composing components |
+| [`17 BootStrap/learning-bootstrap`](./17%20BootStrap/learning-bootstrap/) | Applying Bootstrap styles in React |
+| [`18Fragments/learning-fragments`](./18Fragments/learning-fragments/) | Fragments and rendering lists |
 | [`19Mapmethods/learning-mapmethod`](./19Mapmethods/learning-mapmethod/) | Rendering arrays with `map()` |
-| [`20ConditionalRendering/learning-rendering`](./20ConditionalRendering/learning-rendering/) | Conditional rendering with JavaScript expressions |
-| [`21Props/learning-props`](./21Props/learning-props/) | Props and reusable components |
-| [`Projects/1-todo-app-version-one`](./Projects/1-todo-app-version-one/) | Static todo UI built from reusable components |
-| [`Projects/2-bharat-clock-version-one`](./Projects/2-bharat-clock-version-one/) | Current date and time display |
-| [`Projects/3-todo-app-version-two`](./Projects/3-todo-app-version-two/) | Todo UI starter created from a current Vite React template |
+| [`20ConditionalRendering/learning-rendering`](./20ConditionalRendering/learning-rendering/) | Conditional rendering |
+| [`21Props/learning-props`](./21Props/learning-props/) | Passing props to reusable components |
+| [`Projects/1-todo-app-version-one`](./Projects/1-todo-app-version-one/) | A todo-list UI composed from components |
+| [`Projects/2-bharat-clock-version-one`](./Projects/2-bharat-clock-version-one/) | A clock displaying the current date and time |
+| [`Projects/3-todo-app-version-two`](./Projects/3-todo-app-version-two/) | Todo app exercise in progress |
 
-## Technology
+## Tech Stack
 
-- React 19
-- React DOM
+- React 19 and React DOM
 - Vite 8
 - JavaScript and JSX
-- Bootstrap in exercises that use it
-- Oxlint or ESLint for linting
+- Bootstrap in selected exercises
+- Oxlint or ESLint, depending on the exercise
 
-## Prerequisites
+## Requirements
 
-- Node.js 20 or newer
+- Node.js compatible with the Vite version used by the selected exercise
 - npm
 - A modern web browser
 
 ## Run an Exercise
 
-This repository has no root `package.json`. Run commands inside the folder of the app you want to start.
+There is no root `package.json`. Each app has its own package file, so install dependencies and run scripts from that app's directory.
 
 ```powershell
 cd "18Fragments\learning-fragments"
@@ -42,7 +41,7 @@ npm install
 npm run dev
 ```
 
-Another example:
+Or choose a project:
 
 ```powershell
 cd "Projects\2-bharat-clock-version-one"
@@ -52,61 +51,41 @@ npm run dev
 
 Open the local URL printed by Vite, usually `http://localhost:5173/`.
 
-## Common Commands
+## Available Scripts
 
-Run these from the selected exercise folder:
+Run these commands from an exercise or project directory:
 
-| Command | Description |
+| Command | Purpose |
 |---|---|
-| `npm run dev` | Start the Vite development server |
-| `npm run build` | Create a production build |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run the configured linter |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the app for production |
+| `npm run preview` | Preview a production build |
+| `npm run lint` | Run that app's configured linter |
 
-## Suggested Learning Order
+## Suggested Learning Path
 
 ```text
 firstReactApp
-  -> createReactcomp
-  -> 17 BootStrap
-  -> 18Fragments
-  -> 19Mapmethods
-  -> 20ConditionalRendering
-  -> 21Props
+  -> createReactcomp/vite-project
+  -> 17 BootStrap/learning-bootstrap
+  -> 18Fragments/learning-fragments
+  -> 19Mapmethods/learning-mapmethod
+  -> 20ConditionalRendering/learning-rendering
+  -> 21Props/learning-props
   -> Projects/1-todo-app-version-one
   -> Projects/2-bharat-clock-version-one
-  -> Projects/3-todo-app-version-two
+  -> Projects/3-todo-app-version-two (in progress)
 ```
 
-## Typical Folder Structure
+## Project Notes
 
-```text
-exercise-folder/
-|-- index.html
-|-- package.json
-|-- vite.config.js
-|-- public/
-`-- src/
-    |-- main.jsx
-    |-- App.jsx
-    |-- App.css
-    |-- index.css
-    |-- assets/
-    `-- components/
-```
-
-Some exercises use only a subset of these files.
-
-## Notes
-
-- The first todo app demonstrates static component composition.
-- The Bharat clock reads the current date and time when its component renders; it does not use a live timer.
-- The `19Mapmethods` and `21Props` parent folders contain package manifests, but the React exercises should be run from their nested `learning-*` folders.
-- The Bootstrap exercise uses ESLint, while most of the newer Vite exercises use Oxlint.
+- `19Mapmethods` and `21Props` also contain package manifests in their parent folders. Run the learning exercises from the nested `learning-*` folders listed above.
+- The Bootstrap exercise uses ESLint; most other exercises use Oxlint.
+- The Bharat clock shows the time when the component renders; it does not currently update on an interval.
+- `Projects/3-todo-app-version-two` is not currently ready to run: its component files are empty, and `App.jsx` imports from `src/components/` while the files are in `src/component/`.
 
 ## Troubleshooting
 
-1. Make sure the terminal is inside the specific project folder.
-2. Run `npm install` if dependencies are missing.
-3. Remove `node_modules` and reinstall if dependencies are stale.
-4. If port `5173` is occupied, stop the existing process or let Vite select another port.
+1. Check that your terminal is inside the intended app folder.
+2. Run `npm install` in that folder if dependencies are missing.
+3. If the default Vite port is in use, use the alternative URL Vite prints or free the port.
